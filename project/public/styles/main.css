@@ -16,3 +16,26 @@
 .nav-item:hover{
     background-color: #5a6fe5;
 }
+/* ... (your existing styles) ... */
+
+.logo-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
+}
+
+.access-methods {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.method {
+    text-align: center; /* Center the text below the image */
+}
+
+.method-icon img {
+    display: block; /* Make the image a block element to put the text below */
+    margin: 0 auto; /* Center the image */
+}
