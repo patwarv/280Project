@@ -1,11 +1,14 @@
 .navbar{
-    background-color: rgb(42, 57, 214);
-    height: 75px;
+    background: linear-gradient(to right, #005497, #0069BD) ;
+    height: 125px;
     
 
 }
 #navStuff{
     padding: 10px;
+}
+.navbar-brand{
+    padding: 45px;
 }
 .header{
     font-family: Abhaya Libre;
