@@ -1,0 +1,25 @@
+.navbar{
+    background: linear-gradient(to right, #005497, #0069BD) ;
+    height: 125px;
+}
+#navStuff{
+    padding: 10px;
+}
+.navbar-brand{
+    padding: 45px;
+}
+.header{
+    font-family: Abhaya Libre;
+}
+#aboutUsParagraph{
+    font-family: Abhaya Libre;
+}
+.card-elem-gray{
+    color: gray;
+    text-decoration: none;
+    margin-right: 40px;
+    font-size: medium;
+}
+.card{
+    margin-top: 20px;
+}
