@@ -42,3 +42,8 @@
     display: block; /* Make the image a block element to put the text below */
     margin: 0 auto; /* Center the image */
 }
+#fab{
+    height: 50px;
+    width: 150px;
+    font-size: larger;
+}
