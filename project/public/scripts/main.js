@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     fetchDataButton.addEventListener('click', function() {
         const dataIndex = dataIndexInput.value;
         if(dataIndex){
-            fetch(`./data/services.json`)
+            fetch(`/project/public`)
                 .then(response => response.json())
                 .then(data => {
                     dataTableHead.innerHTML = '';
