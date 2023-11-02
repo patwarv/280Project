@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const dataTableHead = document.querySelector('#dataTable thead tr');
     const dataTableBody = document.querySelector("#dataTable tbody tr");
 
+    
+
     fetchDataButton.addEventListener('click', function() {
         const dataIndex = dataIndexInput.value;
         if(dataIndex){

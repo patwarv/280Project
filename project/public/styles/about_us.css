@@ -4,6 +4,9 @@
     
 
 }
+.nav-item:hover{
+    background-color: #5a6fe5;
+}
 #navStuff{
     padding: 10px;
 }
