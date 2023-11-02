@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     fetchDataButton.addEventListener('click', function() {
         const dataIndex = dataIndexInput.value;
         if(dataIndex){
-            fetch(`/project/public`)
+            fetch(`https://in211.scanurag.com/realResources.json`)
                 .then(response => response.json())
                 .then(data => {
                     dataTableHead.innerHTML = '';

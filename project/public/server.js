@@ -4,7 +4,7 @@ const app = express();
 app.use(express.json());
 app.use(express.static('public'));
 
-const servicesFilePath = './data/services.json';
+const servicesFilePath = 'https://in211.scanurag.com/realResources.json';
 async function readServices(){
     try{
         const data = await fs.readFile(servicesFilePath, 'utf-8');
