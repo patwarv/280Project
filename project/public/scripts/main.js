@@ -46,6 +46,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 }
 
                 $('#dataIndexModal').modal('hide');
+                const sortButton = document.getElementById('showButton');
+                sortButton.style.display = 'block';
             })
             .catch(error => {
                 console.error("Error fetching data: ", error);
@@ -56,6 +58,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 $("#dataIndexModal").modal('hide');
                 $("body").removeClass('modal-open');
                 $('.modal-backdrop').remove();
+                
             });
     });
 });
