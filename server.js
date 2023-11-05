@@ -22,7 +22,7 @@ app.listen(PORT, () => {
 
 // Endpoint to serve local mock.json
 app.get('/services', (req, res) => {
-    res.sendFile(path.join(__dirname, 'project', 'public', 'data', 'mock.json'));
+    res.sendFile(path.join(__dirname, 'project', 'public', 'data', 'services.json'));
 });
 
 // Default route to serve main page

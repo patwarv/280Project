@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     fetchDataButton.addEventListener('click', function() {
         const keyword = keywordInput.value.toLowerCase(); // convert to lowercase for case-insensitive search
+        const search = "county";
         fetch(`/services`)
             .then(response => response.json())
             .then(data => {
@@ -16,8 +17,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 
                 data.forEach(entry => {
                     // Check if any of the object's values contain the keyword
-                    for (let [key, value] of Object.entries(entry)) {
-                        if (String(value).toLowerCase().includes(keyword)) {
+                    // for (let [key, value] of Object.entries(entry)) {
+                        if (entry[search].toLowerCase().includes(keyword)) {
                             resultsFound = true;
                             
                             // Build table header (only once)
@@ -34,10 +35,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
                             });
                             row += '</tr>';
                             dataTableBody.insertAdjacentHTML('beforeend', row);
-                            break;
+                            // break;
                         }
                     }
-                });
+                // }
+                );
 
                 if (!resultsFound) {
                     dataTableBody.innerHTML = `<tr><td colspan="${Object.keys(data[0]).length}">No results found for "${keyword}".</td></tr>`;
