@@ -13,6 +13,7 @@
         <title>Indiana 211</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles/county.css"
         <link rel="stylesheet" href="styles/main.css">
     </head>
     <body>
@@ -80,6 +81,79 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-primary" id="fetchDataButton">Search in This County</button>
+                        <button id="fab" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#countyModal">County</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- county modal-->
+        <div class="modal" id="countyModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">In This County</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div id="mainPage" class="container page-container">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h1>Service name here</h1>
+                                    <div>
+                                        <a class="card-elem-gray">example@mail.com</a>
+                                        <a class="card-elem-gray">https://example.com</a>
+                                    </div>
+                                    <p>Service short description here text text text text text text text</p>
+                                    <hr>
+                                    <p class="card-elem-gray">Status here</p>
+                                    <p class="card-elem-gray">Application process here</p>
+                                    <p class="card-elem-gray">Wait time here</p>
+                                    <p class="card-elem-gray">Fees here</p>
+                                    <p class="card-elem-gray">Schedule here</p>
+                                </div>
+                            </div>
+                
+                            <div class="card">
+                                <div class="card-body">
+                                    <h1>Service name here</h1>
+                                    <div>
+                                        <a class="card-elem-gray">example@mail.com</a>
+                                        <a class="card-elem-gray">https://example.com</a>
+                                    </div>
+                                    <p>Service short description here text text text text text text text</p>
+                                    <hr>
+                                    <p class="card-elem-gray">Status here</p>
+                                    <p class="card-elem-gray">Application process here</p>
+                                    <p class="card-elem-gray">Wait time here</p>
+                                    <p class="card-elem-gray">Fees here</p>
+                                    <p class="card-elem-gray">Schedule here</p>
+                                </div>
+                            </div>
+                
+                            <div class="card">
+                                <div class="card-body">
+                                    <h1>Service name here</h1>
+                                    <div>
+                                        <a class="card-elem-gray">example@mail.com</a>
+                                        <a class="card-elem-gray">https://example.com</a>
+                                    </div>
+                                    <p>Service short description here text text text text text text text</p>
+                                    <hr>
+                                    <p class="card-elem-gray">Status here</p>
+                                    <p class="card-elem-gray">Application process here</p>
+                                    <p class="card-elem-gray">Wait time here</p>
+                                    <p class="card-elem-gray">Fees here</p>
+                                    <p class="card-elem-gray">Schedule here</p>
+                                </div>
+                            </div>
+                            
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
@@ -100,6 +174,9 @@
                 </tr>
             </tbody>
         </table>
+
+        <div class="dimmer">
+        </div>
             
         </div>
         <script src="scripts/main.js" async defer></script>
