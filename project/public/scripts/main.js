@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const dataTableHead = document.querySelector('#dataTable thead tr');
     const dataTableBody = document.querySelector("#dataTable tbody");
     const search = "county";
+    const cardContainer = document.getElementById('cardContainer');
 
     fetchDataButton.addEventListener('click', function() {
         const keyword = keywordInput.value.toLowerCase(); // convert to lowercase for case-insensitive search
@@ -13,6 +14,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             .then(data => {
                 dataTableHead.innerHTML = ''; // Clear existing data
                 dataTableBody.innerHTML = '';
+                cardContainer.innerHTML = '';
                 let resultsFound = false;
                 
                 data.forEach(entry => {
@@ -21,24 +23,83 @@ document.addEventListener('DOMContentLoaded', (event) => {
                         if (entry[search].toLowerCase().includes(keyword)) {
                             resultsFound = true;
                             
-                            // Build table header (only once)
-                            if (dataTableHead.children.length === 0) {
-                                Object.keys(entry).forEach(k => {
-                                    dataTableHead.insertAdjacentHTML('beforeend', `<th>${k}</th>`);
-                                });
-                            }
+                            // // Build table header (only once)
+                            // if (dataTableHead.children.length === 0) {
+                            //     Object.keys(entry).forEach(k => {
+                            //         dataTableHead.insertAdjacentHTML('beforeend', `<th>${k}</th>`);
+                            //     });
+                            // }
 
                             // Build table row for this entry
-                            let row = '<tr>';
-                            Object.values(entry).forEach(val => {
-                                row += `<td>${val}</td>`;
-                            });
-                            row += '</tr>';
-                            dataTableBody.insertAdjacentHTML('beforeend', row);
-                            // break;
-                        }
+                            // let row = '<tr>';
+                            // Object.values(entry).forEach(val => {
+                            //     row += `<td>${val}</td>`;
+                            // });
+                            // row += '</tr>';
+                            // dataTableBody.insertAdjacentHTML('beforeend', row);
+                           
+
+                            
+                            const card = document.createElement('div');
+                            card.classList.add('card');
+
+                            // Append elements to the card
+                            const cardBody = document.createElement('div');
+                            cardBody.classList.add('card-body');
+                            const serviceNameElement = document.createElement('h1');
+                            serviceNameElement.textContent = entry["agency_name"];
+
+                            cardBody.appendChild(serviceNameElement);
+
+
+                            const contactDiv = document.createElement('div');
+
+                            const emailElement = document.createElement('a');
+                            emailElement.classList.add('card-elem-gray');
+                            emailElement.textContent = entry["service_email"];
+                            contactDiv.appendChild(emailElement);
+
+                            const websiteElement = document.createElement('a');
+                            websiteElement.classList.add('card-elem-gray');
+                            websiteElement.textContent = entry["service_website"];
+                            contactDiv.appendChild(websiteElement);
+
+
+                            cardBody.appendChild(contactDiv);
+
+                            const descriptionElement = document.createElement('p');
+                            descriptionElement.textContent = entry["angecny_desc"];
+
+                            const hrElement = document.createElement('hr');
+
+                            cardBody.appendChild(descriptionElement);
+                            cardBody.appendChild(hrElement);
+
+                            const addressElement = document.createElement('p');
+                            addressElement.classList.add('card-elem-gray');
+                            addressElement.textContent = entry["address_1"];
+
+                            cardBody.appendChild(addressElement);
+
+                            const numberElement = document.createElement('p');
+                            numberElement.classList.add('card-elem-gray');
+                            numberElement.textContent = entry["site_number"];
+
+                            cardBody.appendChild(numberElement);
+
+                            const scheduleElement = document.createElement('p');
+                            scheduleElement.classList.add('card-elem-gray');
+                            scheduleElement.textContent = entry["site_schedule"];
+
+                            cardBody.appendChild(scheduleElement);
+                            card.appendChild(cardBody);
+
+                            // Append the card to the container
+                            cardContainer.appendChild(card);
+                        
                     }
-                // }
+                }
+                
                 );
 
                 if (!resultsFound) {
