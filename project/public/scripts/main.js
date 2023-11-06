@@ -3,16 +3,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const keywordInput = document.getElementById('dataIndexInput'); // assuming this is your search bar input
     const dataTableHead = document.querySelector('#dataTable thead tr');
     const dataTableBody = document.querySelector("#dataTable tbody");
+    const search = "county";
 
     fetchDataButton.addEventListener('click', function() {
         const keyword = keywordInput.value.toLowerCase(); // convert to lowercase for case-insensitive search
-        const search = "county";
+        
         fetch(`/services`)
             .then(response => response.json())
             .then(data => {
                 dataTableHead.innerHTML = ''; // Clear existing data
                 dataTableBody.innerHTML = '';
-
                 let resultsFound = false;
                 
                 data.forEach(entry => {
@@ -46,8 +46,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 }
 
                 $('#dataIndexModal').modal('hide');
-                const sortButton = document.getElementById('showButton');
-                sortButton.style.display = 'block';
+                
+                
+                const showthis = document.getElementById('showMe');
+                showthis.style.display = 'block';
+                document.getElementById('bigName').innerHTML = keywordInput.value.toUpperCase() + ' COUNTY';
+               
             })
             .catch(error => {
                 console.error("Error fetching data: ", error);
