@@ -40,7 +40,7 @@
                         <a class="navbar-brand" id="marketingText" href="inProgress.html">Marketing Materials</a>
                     </li>
                     <li class="nav-item">
-                        <a class="navbar-brand" id="marketingText" href="main_page.html">Search</a>
+                        <a class="navbar-brand" id="mainPage" href="main_page.html">Search</a>
                     </li>
                   </ul>
             </div>
@@ -61,7 +61,7 @@
             data-bs-target="#dataIndexModal">
                 <i class="material-symbols-outlined">search</i>
             </button>
-                <img id="counties" src="images/png_counties.png">
+                <img id="counties" src="images/png_counties.png" alt="Indiana counties">
 
             </div>
 
@@ -88,29 +88,17 @@
             <h1 id="bigName">County Name</h1>
             <h5>Use filters for more specific results</h5>
 
-            <div id="buttonGroup">
-                <button id="showButton">Food Services</button>
-                <button id="showButton">Housing Services</button>
             
-            </div>
+        </div>
+        <div id="buttonGroup">
+            <button id="foodButton">Food Services</button>
+            <button id="housingButton">Housing Services</button>
+        
         </div>
         
 
         <div id="cardContainer"></div>
 
-           <!-- table to display data -->
-        <table class="table mt-4" id="dataTable">
-            <thead>
-                <tr>
-                    <!-- headers will be filled dynamically -->
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <!-- Data will be filled dynamically -->
-                </tr>
-            </tbody>
-        </table>
             
         </div>
         <script src="scripts/main.js" async defer></script>
