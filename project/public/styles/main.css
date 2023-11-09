@@ -46,6 +46,18 @@
     height: 80px;
     width: 150px;
     font-size: larger;
+    margin: auto;
+    margin-bottom: 20px;
+}
+#family{
+    height: 320px;
+    width: 350px;
+    font-size: larger;
+}
+#helping{
+    height: 300px;
+    width: 350px;
+    font-size: larger;
 }
 .card {
     border: 1px solid #ccc;
