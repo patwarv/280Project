@@ -14,6 +14,8 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles/main.css">
+        
+       
     </head>
     <body>
 
@@ -33,11 +35,11 @@
                     <li class="nav-item">
                         <a class="navbar-brand" id="contactUsText" href="contactus.html">Contact Us</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="navbar-brand" id="serviceText" href="inProgress.html">Service Providers</a>
                     </li>
                     <li class="nav-item">
-                        <a class="navbar-brand" id="marketingText" href="inProgress.html">Marketing Materials</a>
+                        <a class="navbar-brand" id="marketingText" href="inProgress.html">Marketing Materials</a> -->
                     </li>
                     <li class="nav-item">
                         <a class="navbar-brand" id="mainPage" href="main_page.html">Search</a>
@@ -54,16 +56,39 @@
                 <H1 class="header">Indiana 211</H1>
                 <p id="aboutUsSynopsis">Indiana 211 is a free information and referral service that connects Hoosiers with help and answers from thousands of health and human service agencies and resources right in their local communities, quickly, easily and confidentially. 
                     We use statistical data (not personally identifiable information) from calls, texts and web visits to help shed light on the nature of social needs in Indiana for decision-makers and governments across the state.</p>
-                <!-- <input type="text" placeholder="Search for County">
-                 -->
+                
+                 <p>Indiana 211 resource data as of 10/26/23</p>
                  <h3>Use the search button below to find services in a specific county</h3>
                  <button id="fab" type="button" class="btn btn-primary" data-bs-toggle="modal"
             data-bs-target="#dataIndexModal">
-                <i class="material-symbols-outlined">search</i>
-            </button>
+                <i class="material-symbols-outlined">Search by County</i>
+                </button>
+                <!-- <button id="fab" type="button" class="btn btn-primary" data-bs-toggle="modal"
+            data-bs-target="#dataIndexModalZip">
+                <i class="material-symbols-outlined">Search by Zipcode</i>
+            </button> -->
                 <img id="counties" src="images/png_counties.png" alt="Indiana counties">
 
             </div>
+        
+             
+        <!-- <div class="modal fade" id="dataIndexModalZip" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Search for a Zipcode in Indiana</h5>
+                    </div>
+                    <div class="modal-body">
+                        <input type="number" id="dataIndexInputZip" class="form-control" placeholder="Enter a Zipcode">
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="fetchDataButton">Search in This Zipcode</button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
 
             
 
@@ -76,6 +101,7 @@
                     </div>
                     <div class="modal-body">
                         <input type="string" id="dataIndexInput" class="form-control" placeholder="Enter a County">
+                        
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -87,6 +113,7 @@
         <div id="showMe" style="display: none;">
             <h1 id="bigName">County Name</h1>
             <h5>Use filters for more specific results</h5>
+            
 
             
         </div>
@@ -95,7 +122,9 @@
             <button id="housingButton">Housing Services</button>
             <button id="transportationButton">Transportation Services</button>
             <button id="clothingButton">Clothing Services</button>
+            <button id="healthcareButton">Health Care</button>
         </div>
+       
         
 
         <div id="cardContainer"></div>

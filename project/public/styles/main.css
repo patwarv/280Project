@@ -43,7 +43,37 @@
     margin: 0 auto; /* Center the image */
 }
 #fab{
-    height: 50px;
+    height: 80px;
     width: 150px;
     font-size: larger;
+}
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    background-color:  #0069BD;
+    color: #fff;
+    
+  }
+  
+  .card-body {
+    padding: 10px;
+    color: #fff;
+    
+  }
+  
+  .card-elem-gray {
+    color: #fff;
+  }
+  #bigLogo{
+    max-height: 135px;
+    max-width: 135px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 100px;
+}
+.card a:hover{
+    color:darkgray;
 }
