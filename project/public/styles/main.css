@@ -89,3 +89,78 @@
 .card a:hover{
     color:darkgray;
 }
+:root{
+    --211blue: #0069BD;
+    --211grad: linear-gradient(to right, #005497, #0069BD);
+}
+
+body{
+    font-family: Roboto;
+}
+
+nav{
+    background: var(--211grad);
+}
+.nav-item{
+    margin: auto;
+    margin-inline: 10px;
+    text-transform: none;
+}
+.nav-logo{
+    width: 120px;
+    padding: 10px;
+}
+.nav-btn{
+    color: aliceblue;
+    box-shadow: none;
+    font-weight: bold;
+    border-radius: 20px;
+    background-color: transparent;
+}
+.nav-btn:hover{
+    color: gold;
+}
+
+#search-btn{
+    margin: auto;
+    margin-top: 50px;
+    width: 600px;
+    height: 100px;
+    font-size: xxx-large;
+    font-weight: bold;
+    text-transform: none;
+    border-radius: 60px;
+    color: aliceblue;
+    background-color: var(--211blue);
+}
+#search-btn:hover{
+    color: gold;
+    background-color: var(--211blue);
+}
+#search-btn > p{
+    margin: 0;
+}
+.carousel{
+    z-index: -1;
+}
+.carousel-item{
+    height: 500px;
+}
+.about-us{
+    margin-right: 50px;
+    background-color: rgba(20, 20, 20, 0.75);
+    position: absolute;
+    left: calc(50% - 600px / 2);
+    top: 160px;
+    width: 600px;
+    height: 300px;
+    color: aliceblue;
+}
+.about-us > *{
+    margin-left: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+.about-us > p{
+    font-size: x-large;
+}
