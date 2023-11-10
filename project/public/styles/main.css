@@ -124,6 +124,7 @@ nav{
 #search-btn{
     margin: auto;
     margin-top: 50px;
+    margin-bottom: 50px;
     width: 600px;
     height: 100px;
     font-size: xxx-large;
@@ -163,4 +164,29 @@ nav{
 }
 .about-us > p{
     font-size: x-large;
+}
+
+.about-us > h1{
+    font-size: xx-large;
+}
+
+@media screen and (min-width: 0px){
+    #search-btn{width: 200px; font-size: large; position:absolute; top:400px; left: calc(50% - 100px);}
+    .about-us > p{font-size: large;}
+    .about-us > h1{font-size: large;}
+    .about-us{width: 400px; height: 240px; left: calc(50% - 400px / 2); top: 100px;}
+    .nav-item{font-size: small;}
+}
+
+@media screen and (min-width: 650px){ 
+    #search-btn{width: 600px; font-size: xx-large; position:initial;}
+    .about-us > p{font-size: x-large; margin-top: 50px;}
+    .about-us > h1{font-size: xx-large;}
+    .about-us{width: 600px; height: 300px; left: calc(50% - 600px / 2); top: 170px}
+    .nav-item{font-size: large;}
+    .carousel{width: 100%;}
+}
+
+@media screen and (min-width: 1550px){
+    
 }
