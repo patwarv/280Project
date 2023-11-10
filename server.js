@@ -27,6 +27,6 @@ app.get('/services', (req, res) => {
 
 // Default route to serve main page
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'project', 'public', 'main_page.html')); // Path to main_page.html
+    res.sendFile(path.join(__dirname, 'project', 'public', 'main_temp.html')); // Path to main_page.html
 });
 

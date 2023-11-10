@@ -6,96 +6,54 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
         
-        
         <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css' integrity='sha512-AZtJoEn5SfSZimv10x5NMO2gaZCdoU8nxtHJK8O4SbKNlQeb1ggkvf0b0QixuuXIjX3Tp5jzBbTWajki81Vl2g==' crossorigin='anonymous'/>
         <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css' integrity='sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg==' crossorigin='anonymous'/>
         <link rel="icon" type="favicon" href="favicon.ico">
+        <link rel="stylesheet" href="styles/main_temp.css">
+
         <title>Indiana 211</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="styles/main.css">
         
        
     </head>
-    <body>
 
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js' integrity='sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==' crossorigin='anonymous'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js' integrity='sha512-X/YkDZyjTf4wyc2Vy16YGCPHwAY8rZJY+POgokZjQB2mhIRFJCckEGc6YyX9eNsPfn0PzThEuNs+uaomE5CO6A==' crossorigin='anonymous'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js' integrity='sha512-rXm6RiYDlz+aZC/ht75tGzeAmCg4gVfBA6Be5s5uENSahiXkgwEy10J2Cc+dxUAW4lRRQYbS5pugMOqBrs8ksw==' crossorigin='anonymous'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js' integrity='sha512-WW8/jxkELe2CAiE4LvQfwm1rajOS8PHasCCx+knHG0gBHt8EXxS6T6tJRTGuDQVnluuAvMxWF4j8SNFDKceLFg==' crossorigin='anonymous'></script>
-        <nav class="navbar navbar-expand-sm navbar-dark">
-            <div id="navStuff" class="conatiner-fluid">
-                <ul class="navbar-nav">
-                    <li class="211-logo">
-                        <img alt="Site Logo" class="navbar-logo" src="images/211.png">
-                    </li>
-                   <li class="nav-item">
-                        <a class="navbar-brand" id="aboutUsText" href="about_us.html">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="navbar-brand" id="contactUsText" href="contactus.html">Contact Us</a>
-                    </li>
-                    <!-- <li class="nav-item">
-                        <a class="navbar-brand" id="serviceText" href="inProgress.html">Service Providers</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="navbar-brand" id="marketingText" href="inProgress.html">Marketing Materials</a> -->
-                    </li>
-                    <li class="nav-item">
-                        <a class="navbar-brand" id="mainPage" href="index.html">Search</a>
-                    </li>
-                  </ul>
+    <body>
+        <nav class="navbar-expand navbar-dark">
+            <div class="navbar-nav">
+                <img class="nav-item nav-logo" src="images/211.png">
+                <button type="button" class="nav-item btn nav-btn">About Us</button>
+                <button type="button" class="nav-item btn nav-btn">Contact Us</button>
+                <button type="button" class="nav-item btn nav-btn">Search</button>
             </div>
         </nav>
         
-        
-
-        <div id="mainPage" class="container page-container">
-
-            <div align="center">
-                <H1 class="header">Indiana 211</H1>
-                <p id="aboutUsSynopsis">Indiana 211 is a free information and referral service that connects Hoosiers with help and answers from thousands of health and human service agencies and resources right in their local communities, quickly, easily and confidentially. 
-                    We use statistical data (not personally identifiable information) from calls, texts and web visits to help shed light on the nature of social needs in Indiana for decision-makers and governments across the state.</p>
-                
-                 <p>Indiana 211 resource data as of 10/26/23</p>
-                 <h3>Use the search button below to find services in a specific county</h3>
-                 <button id="fab" type="button" class="btn btn-primary" data-bs-toggle="modal"
-            data-bs-target="#dataIndexModal">
-                <i class="material-symbols-outlined">Search by County</i>
-                </button>
-                <!-- <button id="fab" type="button" class="btn btn-primary" data-bs-toggle="modal"
-            data-bs-target="#dataIndexModalZip">
-                <i class="material-symbols-outlined">Search by Zipcode</i>
-            </button> --><div id="images">
-                <img id="helping" src="images/helpingothers.jpg" alt="">
-                <img id="counties" src="images/png_counties.png" alt="Indiana counties">
-                <img id="family" src="images/Healthy-Family.jpg" alt="">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/community1.jpg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="images/community2.jpg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="images/community3.jpg" class="d-block w-100">
+              </div>
             </div>
+        </div>
 
-            </div>
-        
-             
-        <!-- <div class="modal fade" id="dataIndexModalZip" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Search for a Zipcode in Indiana</h5>
-                    </div>
-                    <div class="modal-body">
-                        <input type="number" id="dataIndexInputZip" class="form-control" placeholder="Enter a Zipcode">
-                        
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" id="fetchDataButton">Search in This Zipcode</button>
-                    </div>
-                </div>
-            </div>
-        </div> -->
+        <div class="card about-us">
+            <h1>Helping Hoosiers Live Better.</h1>
+            <p>2-1-1 is a free and confidential service that helps Hoosiers across Indiana find the local resources they need. Dial 2-1-1 to connect with a navigator. We're here for you 24 hours a day, 7 days a week.</p>
+        </div>
 
-            
+        <div class="d-flex">
+            <button type="button" id="search-btn" class="btn search-btn" data-bs-toggle="modal" data-bs-target="#dataIndexModal">
+                <p>Search by county</p>
+            </button>
+        </div>
 
-            <!-- modal -->
+        <!-- modal -->
         <div class="modal fade" id="dataIndexModal" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -123,17 +81,13 @@
                 <button id="clothingButton">Clothing Services</button>
                 <button id="healthcareButton">Health Care</button>
             </div>
-
-            
         </div>
-       
-       
         
 
         <div id="cardContainer"></div>
-
-            
-        </div>
-        <script src="scripts/main.js" async defer></script>
+        
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        
     </body>
 </html>
