@@ -121,6 +121,27 @@ nav{
     color: gold;
 }
 
+#printBtn{
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 300px;
+    height: 50px;
+    font-size: xx-large;
+    font-weight: bold;
+    text-transform: none;
+    border-radius: 30px;
+    color: aliceblue;
+    background-color: var(--211blue);
+}
+#printBtn:hover{
+    color: gold;
+    background-color: var(--211blue);
+}
+#printBtn > p{
+    margin: 0;
+}
+
 #search-btn{
     margin: auto;
     margin-top: 50px;

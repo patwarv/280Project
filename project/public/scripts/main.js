@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const clothingButton = document.getElementById('clothingButton');
     const healthButton = document.getElementById('healthcareButton');
 
+
     fetchDataButton.addEventListener('click', function() {
         const keyword = keywordInput.value.toLowerCase(); // convert to lowercase for case-insensitive search
         

@@ -41,6 +41,7 @@
               </div>
             </div>
         </div>
+        <p style="text-align: center;">Indiana 211 resource data as of 10/23/23</p>
 
         <div class="card about-us">
             <h1>Helping Hoosiers Live Better.</h1>
@@ -76,6 +77,7 @@
         <div id="showMe" style="display: none;">
             <h1 id="bigName">County Name</h1>
             <h5>Use filters for more specific results</h5>
+            
             <div id="buttonGroup">
                 <button id="foodButton">Food Services</button>
                 <button id="housingButton">Housing Services</button>
@@ -83,12 +85,27 @@
                 <button id="clothingButton">Clothing Services</button>
                 <button id="healthcareButton">Health Care</button>
             </div>
+          
+              <input id="printBtn" type="button" onclick="printDiv('printableArea')" value="Print a List" />
         </div>
         
-
+        <div id="printableArea">
+                    
+       
         <div id="cardContainer"></div>
+        </div>
 
         </div>
+        <script>function printDiv(divName) {
+            var printContents = document.getElementById(divName).innerHTML;
+            var originalContents = document.body.innerHTML;
+       
+            document.body.innerHTML = printContents;
+       
+            window.print();
+       
+            document.body.innerHTML = originalContents;
+       }</script>
         
         
         <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js' integrity='sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==' crossorigin='anonymous'></script>
